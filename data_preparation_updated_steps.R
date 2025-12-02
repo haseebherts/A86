@@ -10,7 +10,7 @@ df2 <- subset(df, state == "Klang Valley" & period != "Other")
 print(summary(df2))
 print(aggregate(perc_18_29 ~ period, df2, summary))
 hist(df2$perc_18_29, main = "Distribution of 18-29 Age Group Proportion",
-     xlab = "Proportion of Cases (%)", col = "green")
+     xlab = "Proportion of Cases (%)", col = "maroon")
 
 
 # Part 3: Parametric Testing
@@ -34,3 +34,9 @@ boxplot(df2$perc_18_29 ~ df2$period,
         col = c("lightblue", "lightgreen"))
 
 
+# Interpretation
+if (wilcox_result$p.value < 0.05) {
+  cat("Significant difference found - reject null hypothesis\n")
+} else {
+  cat("No significant difference - cannot reject null hypothesis\n")
+}
