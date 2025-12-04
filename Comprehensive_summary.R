@@ -25,3 +25,28 @@ early_min <- min(df2$perc_18_29[df2$period == "Early (1-12)"])
 later_min <- min(df2$perc_18_29[df2$period == "Later (13-24)"])
 early_max <- max(df2$perc_18_29[df2$period == "Early (1-12)"])
 later_max <- max(df2$perc_18_29[df2$period == "Later (13-24)"])
+cat(sprintf("   Mean                   %-10.2f%%      %-10.2f%%\n", early_mean, later_mean))
+cat(sprintf("   Median                 %-10.2f%%      %-10.2f%%\n", early_median, later_median))
+cat(sprintf("   Standard Deviation     %-10.2f        %-10.2f\n", early_sd, later_sd))
+cat(sprintf("   Minimum                %-10.2f%%      %-10.2f%%\n", early_min, later_min))
+cat(sprintf("   Maximum                %-10.2f%%      %-10.2f%%\n", early_max, later_max))
+cat("   " , strrep("-", 50), "\n\n")
+cat("   a) Independent Samples T-test:\n")
+cat("      t-statistic:", round(t_test_result$statistic, 3), "\n")
+cat("      Degrees of freedom:", round(t_test_result$parameter, 1), "\n")
+cat("      p-value:", round(t_test_result$p.value, 4), "\n")
+cat("      95% Confidence Interval: [",
+round(t_test_result$conf.int[1], 3), ", ",
+round(t_test_result$conf.int[2], 3), "]\n")
+cat("      Result:", ifelse(t_test_result$p.value < 0.05,
+"SIGNIFICANT (p < 0.05)",
+"NOT SIGNIFICANT (p ≥ 0.05)"), "\n\n")
+cat("   b) Wilcoxon Rank Sum Test:\n")
+cat("      W statistic:", wilcox_result$statistic, "\n")
+cat("      p-value:", round(wilcox_result$p.value, 4), "\n")
+cat("      Result:", ifelse(wilcox_result$p.value < 0.05,
+"SIGNIFICANT (p < 0.05)",
+"NOT SIGNIFICANT (p ≥ 0.05)"), "\n\n")
+mean_difference <- later_mean - early_mean
+cat("   Mean Difference (Later - Early):", round(mean_difference, 2), "%\n")
+cat("   Percentage Change:", round((mean_difference/early_mean)*100, 1), "%\n\n")
