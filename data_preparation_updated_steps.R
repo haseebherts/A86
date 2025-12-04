@@ -13,10 +13,13 @@ hist(df2$perc_18_29, main = "Distribution of 18-29 Age Group Proportion",
      xlab = "Proportion of Cases (%)", col = "maroon")
 
 
+
+
 # Part 3: Parametric Testing
 t_test_result <- t.test(df2$perc_18_29 ~ df2$period)
 print(t_test_result)
 cat("T-test p-value:", t_test_result$p.value, "\n")
+
 
 
 # Part 4: Non-parametric Testing
@@ -26,13 +29,13 @@ median_values <- aggregate(perc_18_29 ~ period, df2, median)
 print(median_values)
 
 
+
 # Part 5: Visualization and Final Interpretation
 boxplot(df2$perc_18_29 ~ df2$period,
         xlab = "Pandemic Period", 
         ylab = "Proportion of Cases (%)",
         main = "Comparison of COVID-19 Case Proportion (Age 18-29)",
-        col = c("lightblue", "lightgreen"))
-
+        col = c("yellow", "purple"))
 
 # Interpretation
 if (wilcox_result$p.value < 0.05) {
