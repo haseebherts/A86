@@ -5,8 +5,3 @@ df$week_number <- as.numeric(gsub("w", "", df$week))
 df$period <- ifelse(df$week_number >= 1 & df$week_number <= 12, "Early (1-12)",
 ifelse(df$week_number >= 13 & df$week_number <= 24, "Later (13-24)", "Other"))
 df2 <- subset(df, state == "Klang Valley" & period != "Other")
-
-print(summary(df2))
-print(aggregate(perc_18_29 ~ period, df2, summary))
-hist(df2$perc_18_29, main = "Distribution of 18-29 Age Group Proportion",
-     xlab = "Proportion of Cases (%)", col = "green")
