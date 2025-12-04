@@ -1,0 +1,14 @@
+COVID-19 ANALYSIS SUMMARY
+================================================== 
+
+Results:
+  T-test p-value: 0.0426 (Significant) 
+  Wilcoxon p-value: 0.0887 (Not Significant) 
+
+Mean Proportions:
+  Early period (weeks 1-12): 23.26 %
+  Later period (weeks 13-24): 24.47 %
+  Difference: 1.2 %
+
+Conclusion:
+  There is NO statistically significant difference.
