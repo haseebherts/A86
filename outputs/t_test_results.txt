@@ -1,0 +1,23 @@
+= ============================================================ 
+INDEPENDENT SAMPLES T-TEST RESULTS
+= ============================================================ 
+
+Test Results:
+
+	Welch Two Sample t-test
+
+data:  df2$perc_18_29 by df2$period
+t = -2.1562, df = 21.376, p-value = 0.0426
+alternative hypothesis: true difference in means between group Early (1-12) and group Later (13-24) is not equal to 0
+95 percent confidence interval:
+ -2.36432029 -0.04401304
+sample estimates:
+ mean in group Early (1-12) mean in group Later (13-24) 
+                   23.26250                    24.46667 
+
+
+
+Interpretation:
+The p-value ( 0.0426 ) is less than 0.05.
+We REJECT the null hypothesis.
+There is a statistically significant difference in means.
