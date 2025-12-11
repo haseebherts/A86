@@ -1,0 +1,21 @@
+COVID-19 ANALYSIS SUMMARY
+================================================== 
+
+Results:
+  T-test p-value: 0.0426 (Significant) 
+  Wilcoxon p-value: 0.0887 (Not Significant) 
+
+Mean Proportions:
+  Early period (weeks 1-12): 23.26 %
+  Later period (weeks 13-24): 24.47 %
+
+4. Creating summary file...
+   Saved to: outputs/summaryupdated.txt
+
+=== FINAL CONCLUSION ===
+No significant difference - cannot reject null hypothesis
+
+ ALYSIS COMPLETED SUCCESSFULLY!
+Output files saved in the 'outputs' folder.
+1. Creating descriptive statistics file...
+   Saved to: outputs/descriptive_statistics_new.txt

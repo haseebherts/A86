@@ -1,0 +1,26 @@
+= ============================================================ 
+DESCRIPTIVE STATISTICS: COVID-19 CASE ANALYSIS
+= ============================================================ 
+
+Dataset: cases_age.csv
+Analysis: Malaysia, Weeks 1-24, Age Group 18-29
+Date: Thu Dec  4 22:36:53 2025 
+
+GROUP DISTRIBUTION:
+Total weeks: 24 
+Early period (weeks 1-12): 12 weeks
+Later period (weeks 13-24): 12 weeks
+
+DESCRIPTIVE STATISTICS TABLE:
+------------------------------------------------------------ 
+Statistic                 Early (1-12)    Later (13-24)  
+------------------------------------------------------------ 
+Mean                      23.26          % 24.47          %
+Median                    23.63      
+2. Creating t-test results file...
+
+3. Creating Wilcoxon test results file...
+Minimum                   20.66          % 22.07          %
+Maximum                   24.74          % 26.71          %
+Sample Size (n)           12              12             
+------------------------------------------------------------ 

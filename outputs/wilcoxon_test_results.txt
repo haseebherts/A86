@@ -1,0 +1,23 @@
+= ============================================================ 
+WILCOXON RANK SUM TEST RESULTS
+= ============================================================ 
+
+Test Results:
+   Saved to: outputs/wilcoxon_test_results.txt
+   Saved to: outputs/wilcoxon_test_resultsnew.txt
+
+4. Creating summary file...
+cation shift is not equal to 0
+
+
+
+Median Values:
+         period perc_18_29
+1  Early (1-12)     23.635
+2 Later (13-24)     24.465
+
+
+Interpretation:
+The p-value ( 0.0887 ) is greater than 0.05.
+We FAIL TO REJECT the null hypothesis.
+No statistically significant difference in distributions.
